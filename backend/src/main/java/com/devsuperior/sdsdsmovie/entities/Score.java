@@ -9,11 +9,10 @@ import javax.persistence.Table;
 public class Score {
 
 	@EmbeddedId
-	private ScorePk id;
+	private ScorePk id = new ScorePk();
 	private Double value;
 	
 	public Score() {
-		id = new ScorePk();
 	}
 	
 	public Score(Movie movie, User user, Double value) {
